@@ -1,0 +1,40 @@
+<div *ngIf="(vm$ | async) as vm">
+  <img src="https://i.imgur.com/xFLNLiO.png">
+  
+  <div>
+    Search for:
+      <input type="text" [formControl]="searchTerm" class="options">
+
+    <div class="limits">
+      Search PageSize:
+      <button class="options"
+        *ngFor="let pageSize of vm.pagination.pageSizes"
+        [ngClass]="{active: pageSize === vm.pagination.selectedSize}"
+        (click)="facade.updatePagination(pageSize)">
+        {{pageSize}}
+      </button>  
+    </div>
+  </div>
+  
+  
+  <hr>
+
+  <ul [ngClass]="{'loading': vm.loading }">
+    <li *ngFor="let u of vm.users ">
+      {{u.name.first}} {{u.name.last}}
+    </li>
+  </ul>
+
+  <hr>
+  <div>    
+    <button *ngIf="showButton" class="options" (click)="getPageSize()">
+      Show PageSize
+    </button>
+
+    <div *ngIf="vm.pagination" class="pagination">
+      Current PageSize = {{ vm.pagination.selectedSize }}
+    </div>
+    
+
+  </div>
+</div>

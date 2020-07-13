@@ -1,0 +1,75 @@
+p {
+  font-family: Lato;
+}
+
+img {
+  width:30vw
+}
+
+.limits {
+  display: block;
+  padding-top:10px;
+}
+.pagination {
+  font-size: 0.75em;
+  color: rgb(61, 41, 175);;
+  padding-top:10px;
+}
+
+.active {
+  background-color: rgb(61, 41, 175);
+  color: white;
+}
+
+.warning {
+  font-size: 0.6em;
+  margin-left: 20px;
+  color: #c62828;
+}
+
+input, button {
+  border: 0;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  color: rgba(0,0,0,.87);
+  padding: 8px;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+input:focus, button:active {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+button:active {
+  background: #f3f3f3;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.column label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.options {
+  border-radius: 3px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.options > button {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.options > button:first-of-type {
+  border-radius: 3px 0 0 3px;;
+}
+
+.options > button:last-of-type {
+  border-radius: 0 3px 3px 0;
+}
